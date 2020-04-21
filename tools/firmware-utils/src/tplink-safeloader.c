@@ -1113,6 +1113,8 @@ static struct device_info boards[] = {
 	},
 
 	/** Firmware layout for the TL-WPA8630P v2 */
+	/* source for partitions is stock firmware published 2017-10-18 */
+	/* see https://www.tp-link.com/uk/support/download/tl-wpa8630p/v2/#Firmware */
 	{
 		.id     = "TLWPA8630PV2",
 		.vendor = "",
@@ -1126,6 +1128,10 @@ static struct device_info boards[] = {
 			{"fs-uboot", 0x20000, 0x20000},
 			{"firmware", 0x40000, 0x5e0000},
 			{"partition-table", 0x620000, 0x02000},
+			{"default-mac", 0x630000, 0x00020},
+			{"pin", 0x630100, 0x00020},
+			{"device-id", 0x630200, 0x00030},
+			{"product-info", 0x631100, 0x01000},
 			{"extra-para", 0x632100, 0x01000},
 			{"soft-version", 0x640000, 0x01000},
 			{"support-list", 0x641000, 0x01000},
@@ -1134,10 +1140,7 @@ static struct device_info boards[] = {
 			{"default-config", 0x660000, 0x10000},
 			{"default-nvm", 0x670000, 0xc0000},
 			{"default-pib", 0x730000, 0x40000},
-			{"default-mac", 0x7e0000, 0x00020},
-			{"pin", 0x7e0100, 0x00020},
-			{"device-id", 0x7e0200, 0x00030},
-			{"product-info", 0x7e1100, 0x01000},
+			/* 0x770000 size 0x80000 not allocated in stock firmware */
 			{"radio", 0x7f0000, 0x10000},
 			{NULL, 0, 0}
 		},

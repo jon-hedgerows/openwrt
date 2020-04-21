@@ -152,6 +152,19 @@
 				read-only;
 			};
 
+			partition@670000 {
+				label = "defaults";
+				reg = <0x670000 0x100000>
+				read-only;
+			}
+
+			// 0x770000, 0x80000 not allocated in stock firmware
+			partition@770000 {
+				label = "unallocated";
+				reg = <0x770000 0x800000>
+				read-only;
+			}
+
 			art: partition@7f0000 {
 				label = "art";
 				reg = <0x7f0000 0x010000>;

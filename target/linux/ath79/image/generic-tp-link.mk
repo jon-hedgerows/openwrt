@@ -318,6 +318,16 @@ define Device/tplink_tl-wr842n-v3
 endef
 TARGET_DEVICES += tplink_tl-wr842n-v3
 
+define Device/tplink_tl-wpa8630p-v2
+  $(Device/tplink-safeloader)
+  ATH_SOC := qca9563
+  IMAGE_SIZE := 6016k
+  DEVICE_TITLE := TP-Link TL-WPA8630P v2
+  DEVICE_PACKAGES := kmod-ath10k-ct ath10k-firmware-qca9888-ct
+  TPLINK_BOARD_ID := TLWPA8630PV2
+endef
+TARGET_DEVICES += tplink_tl-wpa8630p-v2
+
 define Device/tplink_tl-wr1043nd-v1
   $(Device/tplink-8m)
   ATH_SOC := ar9132

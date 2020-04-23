@@ -1104,7 +1104,12 @@ static struct device_info boards[] = {
 			{"default-config", 0x660000, 0x10000},
 			{"default-nvm", 0x670000, 0xc0000},
 			{"default-pib", 0x730000, 0x40000},
-			/* 0x770000 size 0x80000 not allocated in stock firmware */
+			/* 0x770000 size 0x70000 not allocated in stock firmware */
+			/* 0x7e0000 contains partitions in the US not-P and AU variants */
+			{"default-mac-au", 0x7e0000, 0x00020},
+			{"pin-au", 0x7e0100, 0x00020},
+			{"device-id-au", 0x7e0200, 0x00030},
+			{"product-info-au", 0x7e1100, 0x01000},
 			{"radio", 0x7f0000, 0x10000},
 			{NULL, 0, 0}
 		},

@@ -1079,12 +1079,15 @@ static struct device_info boards[] = {
 	/** Firmware layout for the TL-WPA8630P v2 */
 	/* source for partitions is stock firmware published 2017-10-18 */
 	/* see https://www.tp-link.com/uk/support/download/tl-wpa8630p/v2/#Firmware */
+	/* id:45550000 EU and UK variant */
+	/* id:41550000 AU variant */
 	{
 		.id     = "TLWPA8630PV2",
 		.vendor = "",
 		.support_list =
 			"SupportList:\n"
-			"{product_name:TL-WPA8630P,product_ver:2.0.0,special_id:44450000}\n",
+			"{product_name:TL-WPA8630P,product_ver:2.0.0,special_id:45550000}\n"
+			"{product_name:TL-WPA8630P,product_ver:2.0.0,special_id:41550000}\n",
 		.support_trail = '\x00',
 		.soft_ver = NULL,
 		.partitions = {
